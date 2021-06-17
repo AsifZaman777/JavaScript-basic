@@ -1,0 +1,19 @@
+Operator	Example	    Same As
+=	         x = y  	x = y
++=	         x += y 	x = x + y
+-=	         x -= y 	x = x - y
+*=	         x *= y 	x = x * y
+/=	         x /= y 	x = x / y
+%=           x %= y  	x = x % y
+<<=	         x <<= y	x = x << y
+>>=	         x >>= y	x = x >> y
+>>>=	     x >>>= y	x = x >>> y
+&=	         x &= y	    x = x & y
+^=	         x ^= y	    x = x ^ y
+|=	         x |= y	    x = x | y
+**=	         x **= y	x = x ** y
+ 
+
+ Referance : 1. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators
+ 
+ 
