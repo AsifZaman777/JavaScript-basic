@@ -104,12 +104,4 @@ clear.addEventListener('click',()=>
   canvas_context.clearRect(0,0,canvas.width,canvas.height);
 });
 
-// draw =() =>
-// {
-//     canvas_context.clearRect(0,0,canvas.width,canvas.height);
-//     drawCircle(x++,y);
-//     requestAnimationFrame(draw);
-// }
-
-// draw();
 
