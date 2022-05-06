@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        .btn-primary
+        {
+            margin: 20px
+        }
+        #test
+        {
+            color: rgb(15, 82, 59);
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn btn-primary" id="butt">
+     Click here
+    </button>
+    <p id="test"></p>
+
+
+    <script>
+    var action=document.getElementById("butt");
+    action.addEventListener("mouseover",mouseWork);
+    action.addEventListener("click",click);
+    action.addEventListener("mouseout",mouseRelease);
+
+        function mouseWork()
+        {
+          document.getElementById("test").innerHTML+="Mouse Over!<br> ";
+        }
+        function click()
+        {
+          document.getElementById('test').innerHTML+="Clicked !<br>";
+        }
+        function mouseRelease()
+        {
+         document.getElementById('test').innerHTML+="Mouse Relaesed <br>";
+        }
+    </script>
+</body>
+</html>

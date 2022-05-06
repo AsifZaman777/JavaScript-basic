@@ -1,0 +1,89 @@
+<!-- There are two ways of event propagation in the HTML DOM, bubbling and capturing.
+
+Event propagation is a way of defining the element order when an event occurs. If you have a <p> element inside a <div> element, and the user clicks on the <p> element, which element's "click" event should be handled first?
+
+   Bubble: Innert most element is firstly handled and after that the outter one.
+   Capture : Outter most element is firstly handles and after that the inner one. 
+
+---------------------------------------------------------------------
+    Syntax
+    document.addEventListener("event",function(){
+
+    },EvePropagation)
+    ---------------------------------------------------------------------
+
+    Event propagaltion => true => Capture 
+    Event propagation => false => Bubble
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: bisque;
+        }
+        div{
+         background-color: rgb(209, 104, 122);
+         padding: 50px;
+         margin-bottom: 40px;
+        }
+        p{
+         color: rgb(26, 2, 2);
+         font-size: 20px;
+         background-color: rgb(228, 228, 228);
+         padding: 20px;
+         font-family: cursive;
+         
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <h1>Bubble</h1>
+        <p id="text1" >
+           Clcik on the text 
+        </p>
+     </div>
+
+     <div id="div2">
+        <h1>Capture</h1>
+        <p id="text2" >
+           Clcik on the text 
+        </p>
+     </div>
+ 
+     <script>
+        var firstDiv=document.getElementById("div1");
+        var firstText=document.getElementById("text1");
+        var secDiv=document.getElementById("div2");
+        var secText=document.getElementById("text2");
+
+        firstDiv.addEventListener("click",function()
+        {
+         alert("You have clicked Pink");
+        },false);
+        
+        firstText.addEventListener("click",function()
+        {
+         alert("You have clicked on White ");
+        },false);
+        
+        secDiv.addEventListener("click",function()
+        {
+         alert("You have clicked on Pink");
+        },true);
+        
+        secText.addEventListener("click",function()
+        {
+         alert("You have clicked on White");
+        },true);
+
+     </script>
+</body>
+</html>

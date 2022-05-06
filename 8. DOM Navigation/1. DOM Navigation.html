@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h2 id="Heading">Heading
+      
+  <p id="para">Child of h2</p>
+  <p id="para2">Child 2 of h2</p>
+</h2>
+    <script>
+
+        ///three results are same ---> (Child of h2)
+
+      var result1=document.getElementById("para").innerHTML;
+       console.log(result1);
+
+      var result2=document.getElementById("para").firstChild.nodeValue;
+       console.log(result2);
+
+      var result3=document.getElementById("para").childNodes[0].nodeValue;
+      console.log(result3);
+  
+      
+         //////----/////
+
+         
+
+      var result4=document.getElementById("para2").childNodes[0].nodeValue;
+      console.log(result4); ///return Child 2 of h2 (value of p#para2)
+
+      var ChildNodes=document.getElementById("Heading").childNodes;
+      console.log(ChildNodes); 
+     
+      var sibling=document.getElementById("para").nextElementSibling.innerHTML;
+      console.log(sibling); //return para 2 
+
+    </script>
+</body>
+</html>

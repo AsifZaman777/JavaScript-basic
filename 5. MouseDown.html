@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="friend" onmousedown="tamimOn()" onmouseup="prottoy()" src="prottoy.jpg" width="400" height="400">
+     <p >Hold and down the mouse to set tamim Picture.  </p>
+    <script>
+        function tamimOn()
+        {
+          document.getElementById('friend').src="tamim.jpg";
+        }
+        function prottoy()
+        {
+            document.getElementById('friend').src="prottoy.jpg";
+        }
+    </script>
+</body>
+</html>

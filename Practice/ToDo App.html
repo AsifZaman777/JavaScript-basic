@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <title>To Do App</title>
+
+    <style>
+        body {
+            background-color: rgb(53, 32, 7);
+            margin: auto;
+        }
+
+        .btn-danger {
+            color: rgb(16, 156, 156);
+            font-size: 30px;
+            margin: 36px 0px 0px 0px;
+            position: absolute;
+            padding: 11px;
+            background-color: rgb(207, 64, 88);
+            border: 2px solid black;
+        }
+
+        div {
+            border: 2px solid rgb(207, 64, 88);
+            border-radius: 10px;
+            width: 800px;
+            height: 800px;
+            margin: 0px 0px 0px 0px;
+            background-color: rgb(91, 114, 187);
+        }
+
+        div>input {
+            margin: 40px 0px 20px 109px;
+            padding: 20px;
+            border-radius: 12px 2px 2px 12px;
+            outline: none;
+            border: none;
+            
+        }
+
+        .task-style {
+            font-size: larger;
+            cursor: pointer;
+            color: white;
+            background-color: #dd1f42;
+            padding: 0px 0px 0px 0px;
+            margin: 0px 300px 4px 110px;
+            border: 2px solid #d25050;
+            border-radius: 30px;
+            text-align: center;
+            font-family: cursive;
+        }
+        .strike
+        {
+            text-decoration: line-through 3px solid rgba(29, 1, 1, 0.828);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="todo-container">
+        <input type="text" placeholder="Serial , Task" id="insert-task">
+        <button id="butt1" class="btn btn-danger">+</button>
+    </div>
+    <script>
+        var danger = document.getElementById("butt1");
+        var insert = document.getElementById("insert-task");
+        var container = document.getElementById("todo-container");
+        danger.addEventListener("click", newTask);
+   
+    
+        function newTask() {
+            if(insert.value!='')
+           {
+                var paragraph = document.createElement('p');
+                paragraph.classList.add('task-style');
+                paragraph.innerText = insert.value;
+                container.appendChild(paragraph);
+                
+                paragraph.addEventListener("click",function()
+                {
+                   paragraph.classList.add('strike');
+                })
+                paragraph.addEventListener("dblclick",function()
+                {
+                   container.removeChild(paragraph);
+                })
+               }  
+               else
+               {
+                   alert('Please insert your task');
+               }
+        }
+   
+       
+
+    </script>
+</body>
+
+</html>

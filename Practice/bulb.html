@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <title>Document</title>
+   <style>
+       body{
+           margin: auto;
+
+       }
+      .btn-primary
+      {
+        margin:200px 0px 0px 0px;
+      }
+      .btn-danger
+      {
+          margin:200px 0px 0px 400px;
+         }      
+         img{
+            margin: 176px 0px 0px -443px;
+         }
+   </style>
+</head>
+<body>
+    <button class="btn btn-primary " onclick="lightOn()"> Light On</button>
+    <button class="btn btn-danger" onclick="LightOff()"> Light Off</button>
+    <img src="off.png" id="image" width="300px" height="400px">
+
+    <script>
+   lightOn = () =>
+   {
+   document.getElementById("image").src="on.png";
+   }
+     LightOff = () => 
+     {
+         document.getElementById("image").src="off.png";
+     }
+    </script>
+</body>
+</html>
