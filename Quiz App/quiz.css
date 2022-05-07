@@ -1,0 +1,115 @@
+
+*
+{
+    box-sizing: border-box;
+}
+body{
+
+    background-color: #bdd4e7;
+background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+
+    margin: 0;
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+.quizContainer
+{
+    width: 600px;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    opacity: 1;
+    box-shadow: 2px 2px 22px 0px rgba(0, 0, 0, 0.541) ;
+    font-family: inherit;
+    border: none;
+    outline: none;
+    max-width: 100%;
+    transition: 0.25s;
+}
+
+div>ul{
+    list-style: none; 
+    margin-left: 0; 
+    position: relative;
+}
+
+h2{  
+  font-size: 1.45rem;
+  font-weight: bolder;  
+  padding: 1rem;
+  width: 600px;
+  height:100px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.resulth
+{
+    text-align: center;
+    font-family: cursive;
+    justify-content: center;
+    font-style: italic;
+    font-weight: bolder;
+    background:#d80718d3;
+    color: white;
+    font-size: 4rem;
+}
+
+.result{
+    text-align: center;
+    font-family: cursive;
+    justify-content: center;
+    min-height: 40vh;
+    font-style: italic;
+    font-weight: bolder;
+    background:#850a4b;
+    color: white;
+    font-size: 2rem;
+}
+
+div>ul>li
+{
+    font-size: 1.1rem;
+    padding: 0.67rem;
+    font-family: inherit;
+    height: 60px;
+}
+
+.submit
+{
+    align-items: center;
+    justify-content: center;
+    height: 3.50rem;
+    width: 600px;
+    margin-top: 50px;
+    border: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: rgba(29, 29, 151, 0.671);
+    color: #7ee8fa;
+    font-size: 1.29rem;
+    transition: 0.25s;
+    outline: none;
+    font-family:inherit;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    position:static;
+}
+.submit:hover{
+    color: #ffffff;
+    background-color: rgba(29, 29, 151, 0.828);
+    outline: none;
+}
+
+input[type=radio]
+{ 
+  transform: scale(1.5);
+  width: 1rem;
+}
+
+
